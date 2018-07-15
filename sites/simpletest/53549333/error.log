@@ -1,0 +1,1 @@
+[30-Jun-2018 03:57:40 Australia/Sydney] PHP Fatal error:  Out of memory (allocated 503316480) (tried to allocate 457183232 bytes) in C:\Bitnami\drupal-8.5.1-0\apps\drupal\htdocs\modules\rules\tests\src\Functional\UiPageTest.php on line 37

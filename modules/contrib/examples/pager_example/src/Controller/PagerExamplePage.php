@@ -66,7 +66,7 @@ class PagerExamplePage extends ControllerBase {
     $build = [
       'description' => [
         '#theme' => 'pager_example_description',
-        '#description' => 'foo',
+        '#description' => 'foooooooooooo',
         '#attributes' => [],
       ],
     ];

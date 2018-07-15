@@ -88,6 +88,7 @@ class EventsExampleSubscriber implements EventSubscriberInterface {
     // You can use the event object to access information about the event passed
     // along by the event dispatcher.
     if ($event->getType() == 'stolen_princess') {
+      \Drupal::logger('events_example')->notice("TEST1");
       drupal_set_message($this->t('Mario has been alerted. Thank you. This message was set by an event subscriber. See \Drupal\events_example\EventSubscriber\EventsExampleSubscriber::notifyMario()'), 'status');
     }
   }

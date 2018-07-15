@@ -74,6 +74,7 @@ class EventsExampleForm extends FormBase {
         'cat' => $this->t('Cat stuck in tree'),
         'joker' => $this->t('Something involving the Joker'),
       ],
+      '#default_value' => 'stolen_princess',
     ];
 
     $form['incident'] = [

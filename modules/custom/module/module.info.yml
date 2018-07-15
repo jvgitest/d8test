@@ -1,0 +1,10 @@
+name: Module
+core: 8.x
+description: description
+package: package
+type: module
+version: 1.0
+dependencies:
+  - block
+  - node
+  - examples:events_example

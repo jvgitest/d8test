@@ -68,6 +68,7 @@ class EmailExampleGetFormPage extends FormBase {
     ];
     $form['email'] = [
       '#type' => 'textfield',
+      //'#type' => 'email', or HTML5, no need validator for value
       '#title' => t('E-mail address'),
       '#required' => TRUE,
     ];

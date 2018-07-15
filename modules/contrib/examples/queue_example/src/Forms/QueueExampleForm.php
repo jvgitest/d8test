@@ -152,7 +152,7 @@ class QueueExampleForm extends FormBase {
     $form['insert_fieldset']['string_to_add'] = [
       '#type' => 'textfield',
       '#size' => 10,
-      '#default_value' => $this->t('item @counter', ['@counter' => $form_state->get('insert_counter')]),
+      '#default_value' => $this->t('item @counter', ['@counter' => count($items) + 1]),
     ];
 
     $form['insert_fieldset']['add_item'] = [
@@ -305,12 +305,13 @@ class QueueExampleForm extends FormBase {
     $count = $queue->numberOfItems();
     drupal_set_message($this->t('Queued your string (@string_to_add). There are now @count items in the queue.', ['@count' => $count, '@string_to_add' => $form_state->getValue('string_to_add')]));
     // Allows us to keep information in $form_state.
-    $form_state->setRebuild();
+    //$form_state->setRebuild();
 
     // Unsetting the string_to_add allows us to set the incremented default
     // value for the user so they don't have to type anything.
     $form_state->unsetValue('string_to_add');
     $form_state->set('insert_counter', $count + 1);
+    //\Drupal::logger('queue_example')->notice('FF @nb', ['@nb'=>($count + 1)]);
   }
 
   /**

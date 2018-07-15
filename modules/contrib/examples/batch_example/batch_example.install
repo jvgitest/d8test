@@ -24,7 +24,7 @@
  *
  * @ingroup batch_example
  */
-function batch_example_update_8001(&$sandbox) {
+function batch_example_update_8002(&$sandbox) {
   // Use the sandbox at your convenience to store the information needed
   // to track progression between successive calls to the function.
   if (!isset($sandbox['progress'])) {
